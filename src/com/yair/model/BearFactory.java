@@ -2,21 +2,15 @@ package com.yair.model;
 
 import java.util.Random;
 
-enum BearType{
-    PolarBear,
-    GrizzlyBear,
-    PandaBear
-}
 public class BearFactory {
     private static BearFactory instance;
 
-    public static BearFactory getInstance() {
+    public BearFactory getInstance() {
         if (instance == null) {
             instance = new BearFactory();
         }
         return instance;
     }
-    private BearFactory() {}
 
     public Bear createBear(BearType bearType){
         Random rnd = new Random();
