@@ -5,12 +5,13 @@ import java.util.Random;
 public class BearFactory {
     private static BearFactory instance;
 
-    public BearFactory getInstance() {
+    public static BearFactory getInstance() {
         if (instance == null) {
             instance = new BearFactory();
         }
         return instance;
     }
+    private BearFactory(){}
 
     public Bear createBear(BearType bearType){
         Random rnd = new Random();

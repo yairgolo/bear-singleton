@@ -10,8 +10,8 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-        BearFactory instance = new BearFactory().getInstance();
-        Bear bear = instance.createBear(BearType.PandaBear);
-        System.out.println(bear);
+        Bear b1 = BearFactory.getInstance().createBear(BearType.PandaBear);
+        BearFactory bearFactory = BearFactory.getInstance();
+        Bear b2 = bearFactory.createBear(BearType.PandaBear);
     }
 }
